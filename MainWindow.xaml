@@ -4,11 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BakeryStoreApp"
-        xmlns:converters="http://sharpvectors.codeplex.com/svgc/"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="Transparent" AllowsTransparency="True"
         WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="CanResize"
         Style="{StaticResource WindowStyle}">
+
+    <Window.Resources>
+        <ResourceDictionary Source="Assets.xaml"></ResourceDictionary>
+    </Window.Resources>
 
     <Grid MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
         <Grid.ColumnDefinitions>
@@ -46,20 +49,55 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="40"></ColumnDefinition>
-                            <ColumnDefinition Width="40"></ColumnDefinition>
-                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="35"></ColumnDefinition>
+                            <ColumnDefinition Width="35"></ColumnDefinition>
+                            <ColumnDefinition Width="35"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
-                        <Ellipse Grid.Column="1" Width="25" Height="25" Fill="#D9D9D9" Stroke="#D9D9D9"
-                                 HorizontalAlignment="Right">
-                        </Ellipse>
-                        <Ellipse Grid.Column="2" Width="25" Height="25" Fill="#D9D9D9" Stroke="#D9D9D9"
-                                 HorizontalAlignment="Right">
-                        </Ellipse>
-                        <Ellipse Grid.Column="3" Width="25" Height="25" Fill="#D9D9D9" Stroke="#D9D9D9"
-                                 HorizontalAlignment="Right">
-                        </Ellipse>
+                        <!-- <Ellipse Grid.Column="1" Width="25" Height="25" Fill="#D9D9D9" Stroke="#D9D9D9" -->
+                        <!--          HorizontalAlignment="Center"> -->
+                        <!-- </Ellipse> -->
+                        <!-- ~1~ <Ellipse Grid.Column="1" Width="13" Height="13" HorizontalAlignment="Center"> @1@ -->
+                        <!-- ~1~     <Ellipse.Fill> @1@ -->
+                        <!-- ~1~         <VisualBrush Stretch="Fill" Visual="{StaticResource MinimizeIcon}"></VisualBrush> @1@ -->
+                        <!-- ~1~     </Ellipse.Fill> @1@ -->
+                        <!-- ~1~ </Ellipse> @1@ -->
+                        <!-- -->
+                        <!-- <Ellipse Grid.Column="2" Width="25" Height="25" Fill="#D9D9D9" Stroke="#D9D9D9" -->
+                        <!--          HorizontalAlignment="Right"> -->
+                        <!-- </Ellipse> -->
+                        <!-- ~1~ <Ellipse Grid.Column="2" Width="16" Height="16" HorizontalAlignment="Center"> @1@ -->
+                        <!-- ~1~     <Ellipse.Fill> @1@ -->
+                        <!-- ~1~         <VisualBrush Stretch="Fill" Visual="{StaticResource MaximizeIcon}"></VisualBrush> @1@ -->
+                        <!-- ~1~     </Ellipse.Fill> @1@ -->
+                        <!-- ~1~ </Ellipse> @1@ -->
+                        <!-- -->
+                        <!-- <Ellipse Grid.Column="3" Width="25" Height="25" Fill="#D9D9D9" Stroke="#D9D9D9" -->
+                        <!--          HorizontalAlignment="Right"> -->
+                        <!-- </Ellipse> -->
+                        <!-- <Ellipse Grid.Column="3" Width="13" Height="13" HorizontalAlignment="Center"> -->
+                        <!--     <Ellipse.Fill> -->
+                        <!--         <VisualBrush Stretch="Fill" Visual="{StaticResource CloseIcon}"></VisualBrush> -->
+                        <!--     </Ellipse.Fill> -->
+                        <!-- </Ellipse> -->
+                        <Button Grid.Column="1" Width="25" Height="25" HorizontalAlignment="Center"
+                                Style="{StaticResource windowButton}"
+                                VerticalAlignment="Center">
+                            <ContentControl Width="16" Height="16" Content="{StaticResource MinimizeIcon}"
+                                            VerticalAlignment="Center" HorizontalAlignment="Center"></ContentControl>
+                        </Button>
+                        <Button Grid.Column="2" Width="25" Height="25" HorizontalAlignment="Center"
+                                Style="{StaticResource windowButton}"
+                                VerticalAlignment="Center">
+                            <ContentControl Width="16" Height="16" Content="{StaticResource MaximizeIcon}"
+                                            VerticalAlignment="Center" HorizontalAlignment="Center" ></ContentControl>
+                        </Button>
+                        <Button Grid.Column="3" Width="25" Height="25" HorizontalAlignment="Center"
+                                Style="{StaticResource windowButton}"
+                                VerticalAlignment="Center">
+                            <ContentControl Width="16" Height="16" Content="{StaticResource CloseIcon}"
+                                            VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"></ContentControl>
+                        </Button>
                     </Grid>
                 </Border>
                 <Separator VerticalAlignment="Bottom" Background="#EDEDED" Width="Auto" Margin="15 0 15 0"></Separator>
