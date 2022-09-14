@@ -23,12 +23,26 @@
 
         <!-- Sidebar menu  -->
         <Border Grid.Column="0" Background="White" CornerRadius="25 0 0 25">
-            <StackPanel Orientation="Vertical" Margin="0 30 0 30">
-                <Button Content="Home" Style="{StaticResource menuButton}"></Button>
-                <Button Content="Home" Style="{StaticResource menuButton}"></Button>
-                <Button Content="Home" Style="{StaticResource menuButton}"></Button>
-                <Button Content="Home" Style="{StaticResource menuButton}"></Button>
-            </StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Margin="0 15 0 0">
+                    <StackPanel Orientation="Horizontal" >
+                        <Image Source="C:\Users\18443kvn\RiderProjects\BakeryStoreApp\assets\1492617962-yumminkyskyconsmix01_83457 1.png" Width="50" Height="50" Margin="20 0 15 0"></Image>
+                        <Label Content="Bakery" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="#6F6F6F"></Label>
+                    </StackPanel>
+                </Border>
+                
+                <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0 30 0 30">
+                    <Button Content="Home" Style="{StaticResource menuButton}"></Button>
+                    <Button Content="Home" Style="{StaticResource menuButton}"></Button>
+                    <Button Content="Home" Style="{StaticResource menuButton}"></Button>
+                    <Button Content="Home" Style="{StaticResource menuButton}"></Button>
+                </StackPanel>    
+            </Grid>
+            
         </Border>
 
         <Separator Grid.Column="0" HorizontalAlignment="Right" Background="#EDEDED" Width="Auto" Margin="0 15 0 15 ">
@@ -80,23 +94,26 @@
                         <!--         <VisualBrush Stretch="Fill" Visual="{StaticResource CloseIcon}"></VisualBrush> -->
                         <!--     </Ellipse.Fill> -->
                         <!-- </Ellipse> -->
-                        <Button Grid.Column="1" Width="25" Height="25" HorizontalAlignment="Center"
+                        <Button Grid.Column="1" Width="23" Height="23" HorizontalAlignment="Center"
                                 Style="{StaticResource windowButton}"
-                                VerticalAlignment="Center">
-                            <ContentControl Width="16" Height="16" Content="{StaticResource MinimizeIcon}"
+                                VerticalAlignment="Center"
+                                Click="ButtonMinimize_OnClick">
+                            <ContentControl Width="13" Height="13" Content="{StaticResource MinimizeIcon}"
                                             VerticalAlignment="Center" HorizontalAlignment="Center"></ContentControl>
                         </Button>
-                        <Button Grid.Column="2" Width="25" Height="25" HorizontalAlignment="Center"
+                        <Button Grid.Column="2" Width="23" Height="23" HorizontalAlignment="Center"
                                 Style="{StaticResource windowButton}"
-                                VerticalAlignment="Center">
-                            <ContentControl Width="16" Height="16" Content="{StaticResource MaximizeIcon}"
-                                            VerticalAlignment="Center" HorizontalAlignment="Center" ></ContentControl>
+                                VerticalAlignment="Center"
+                                Click="ButtonMaximize_OnClick">
+                            <ContentControl Width="13" Height="13" Content="{StaticResource MaximizeIcon}"
+                                            VerticalAlignment="Center" HorizontalAlignment="Center"></ContentControl>
                         </Button>
-                        <Button Grid.Column="3" Width="25" Height="25" HorizontalAlignment="Center"
+                        <Button Grid.Column="3" Width="23" Height="23" HorizontalAlignment="Center"
                                 Style="{StaticResource windowButton}"
-                                VerticalAlignment="Center">
-                            <ContentControl Width="16" Height="16" Content="{StaticResource CloseIcon}"
-                                            VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"></ContentControl>
+                                VerticalAlignment="Center"
+                                Click="ButtonClose_OnClick">
+                            <ContentControl Width="13" Height="13" Content="{StaticResource CloseIcon}"
+                                            VerticalAlignment="Center" HorizontalAlignment="Center"></ContentControl>
                         </Button>
                     </Grid>
                 </Border>

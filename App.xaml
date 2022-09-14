@@ -46,19 +46,25 @@
         
         <Style x:Key="windowButton" TargetType="Button">
             <Setter Property="Background" Value="#D9D9D9"></Setter>
-            <Setter Property="Foreground" Value="#D9D9D9"></Setter>
+            <Setter Property="Foreground" Value="#6F6F6F"></Setter>
             <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
             <Setter Property="Tag" Value="#6F6F6F"></Setter>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border Background="{TemplateBinding Background}"
-                                CornerRadius="10">
+                                CornerRadius="20">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#BCBCBC"></Setter>
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
     </Application.Resources>

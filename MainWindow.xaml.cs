@@ -29,5 +29,20 @@ namespace BakeryStoreApp
         {
             this.DragMove();
         }
+
+        private void ButtonClose_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ButtonMaximize_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = this.WindowState == WindowState.Normal ? WindowState.Maximized : WindowState.Normal;
+        }
+
+        private void ButtonMinimize_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = this.WindowState == WindowState.Normal ? WindowState.Minimized : WindowState.Normal;
+        }
     }
 }
