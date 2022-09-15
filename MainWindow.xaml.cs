@@ -25,10 +25,11 @@ namespace BakeryStoreApp
         public MainWindow()
         {
             InitializeComponent();
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
         }
 
         [DllImport("user32.dll")]
-        public static extern IntPtr SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private static extern IntPtr SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
         
         private void UIElement_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
