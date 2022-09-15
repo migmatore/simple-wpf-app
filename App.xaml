@@ -17,6 +17,7 @@
                     <WindowChrome CornerRadius="25" GlassFrameThickness="1" UseAeroCaptionButtons="False" />
                 </Setter.Value>
             </Setter>
+            <Setter Property="Background" Value="White"></Setter>
         </Style>
 
         <Style x:Key="menuButton" TargetType="Button">
