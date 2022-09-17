@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BakeryStoreApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="Transparent" AllowsTransparency="True"
+        Title="MainWindow" Height="450" Width="800" MinHeight="350" MinWidth="700" Background="Transparent"
+        AllowsTransparency="True"
         WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="CanResize"
-        Style="{StaticResource WindowStyle}">
+        Style="{StaticResource WindowStyle}" >
 
     <Window.Resources>
         <ResourceDictionary Source="Assets.xaml"></ResourceDictionary>
     </Window.Resources>
 
-    <Border Background="White" CornerRadius="25"  MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
+    <Border Background="White" CornerRadius="25" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="170"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <!-- <ColumnDefinition Width="200"></ColumnDefinition> -->
                 <!-- <ColumnDefinition Width="*"></ColumnDefinition> -->
@@ -26,24 +27,24 @@
             <Border Grid.Column="0" Background="White" CornerRadius="25 0 0 25">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="0.2*"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Border Margin="0 15 0 0">
                         <StackPanel Orientation="Horizontal">
                             <!-- <Image Source="C:\Users\18443kvn\RiderProjects\BakeryStoreApp\assets\1492617962-yumminkyskyconsmix01_83457 1.png" Width="50" Height="50" Margin="20 0 15 0"></Image> -->
-                            <Image Source="{StaticResource logo2}" Width="50" Height="50" Margin="20 0 15 0"></Image>
+                            <Image Source="{StaticResource logo2}" Width="50" Height="50" Margin="20 0 5 0"></Image>
                             <Label Content="Bakery" Width="Auto" Height="Auto" HorizontalAlignment="Center"
-                                   VerticalAlignment="Center" FontSize="20" Foreground="#6F6F6F">
+                                   VerticalAlignment="Center" FontSize="22" Foreground="#6F6F6F">
                             </Label>
                         </StackPanel>
                     </Border>
 
-                    <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0 30 0 30">
+                    <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0 20 0 30">
                         <Button Content="Home" Style="{StaticResource menuButton}"></Button>
-                        <Button Content="Home" Style="{StaticResource menuButton}"></Button>
-                        <Button Content="Home" Style="{StaticResource menuButton}"></Button>
-                        <Button Content="Home" Style="{StaticResource menuButton}"></Button>
+                        <Button Content="Products" Style="{StaticResource menuButton}"></Button>
+                        <Button Content="Cart" Style="{StaticResource menuButton}"></Button>
+                        <Button Content="Account" Style="{StaticResource menuButton}"></Button>
                     </StackPanel>
                 </Grid>
 
@@ -59,12 +60,12 @@
             <Border Grid.Column="1" Background="#FDFDFD" CornerRadius="0 25 25 0">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
 
 
-                    <Border Padding="15 0 15 0">
+                    <Border Grid.Row="0" Padding="15 0 15 0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -99,17 +100,25 @@
                             <!--         <VisualBrush Stretch="Fill" Visual="{StaticResource CloseIcon}"></VisualBrush> -->
                             <!--     </Ellipse.Fill> -->
                             <!-- </Ellipse> -->
-                            <Button Grid.Column="1" Width="23" Height="23" HorizontalAlignment="Center"
+                            <!-- <Button Grid.Column="0" Width="23" Height="23" -->
+                            <!--         Style="{StaticResource windowButton}" -->
+                            <!--         Click="ButtonMaximize_OnClick"> -->
+                            <!--      -->
+                            <!-- </Button> -->
+                            <!-- -->
+                            
+                            
+                            <Button Grid.Column="1" Width="23" Height="23"
                                     Style="{StaticResource windowButton}"
-                                    VerticalAlignment="Center"
+                                    
                                     Click="ButtonMinimize_OnClick">
-                                <ContentControl Width="13" Height="13" Content="{StaticResource MinimizeIcon}"
-                                                VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <ContentControl Width="13" Height="13"
+                                                VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Margin="2 0 0 0" Content="{StaticResource MinimizeIcon}">
                                 </ContentControl>
                             </Button>
-                            <Button Grid.Column="2" Width="23" Height="23" HorizontalAlignment="Center"
+                            <Button Grid.Column="2" Width="23" Height="23"
                                     Style="{StaticResource windowButton}"
-                                    VerticalAlignment="Center"
                                     Click="ButtonMaximize_OnClick">
                                 <ContentControl Width="13" Height="13" Content="{StaticResource MaximizeIcon}"
                                                 VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -119,7 +128,7 @@
                                     Style="{StaticResource windowButton}"
                                     VerticalAlignment="Center"
                                     Click="ButtonClose_OnClick">
-                                <ContentControl Width="13" Height="13" Content="{StaticResource CloseIcon}"
+                                <ContentControl Width="20" Height="20" Content="{StaticResource CloseIcon}"
                                                 VerticalAlignment="Center" HorizontalAlignment="Center">
                                 </ContentControl>
                             </Button>

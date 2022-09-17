@@ -10,11 +10,15 @@
         <!--                             Source="Assets.xaml" /> -->
         <!--     </ResourceDictionary.MergedDictionaries> -->
         <!-- </ResourceDictionary> -->
-        
+
         <Style x:Key="WindowStyle" TargetType="Window">
             <Setter Property="WindowChrome.WindowChrome">
                 <Setter.Value>
-                    <WindowChrome CornerRadius="25" GlassFrameThickness="1" UseAeroCaptionButtons="False" />
+                    <WindowChrome NonClientFrameEdges="None"
+                                  GlassFrameThickness="0"
+                                  ResizeBorderThickness="5"
+                                  CaptionHeight="0"
+                                  CornerRadius="0" UseAeroCaptionButtons="False" />
                 </Setter.Value>
             </Setter>
             <Setter Property="Background" Value="White"></Setter>
@@ -37,19 +41,19 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            
+
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#F4F4F4"></Setter>
                 </Trigger>
             </Style.Triggers>
         </Style>
-        
+
         <Style x:Key="windowButton" TargetType="Button">
-            <Setter Property="Background" Value="#D9D9D9"></Setter>
-            <Setter Property="Foreground" Value="#6F6F6F"></Setter>
+            <Setter Property="Background" Value="#F4F4F4"></Setter>
+            <Setter Property="Foreground" Value="#4F4F4F"></Setter>
             <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
-            <Setter Property="Tag" Value="#6F6F6F"></Setter>
+            <Setter Property="Tag" Value="#8F8F8F"></Setter>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -60,10 +64,10 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            
+
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#BCBCBC"></Setter>
+                    <Setter Property="Background" Value="#f0f0f0"></Setter>
                 </Trigger>
             </Style.Triggers>
         </Style>
